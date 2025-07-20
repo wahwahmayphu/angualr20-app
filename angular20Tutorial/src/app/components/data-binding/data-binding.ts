@@ -1,25 +1,36 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.html',
-  styleUrl: './data-binding.css'
+  styleUrl: './data-binding.css',
 })
 export class DataBinding {
-  courseName: string = "Angular 20 Tutorial";
-  
-  productPrice : number = 12500;
-  
+  courseName: string = 'Angular 20 Tutorial';
+
+  productPrice: number = 12500;
+
   maxLength: number = 5;
-  
+
   minChar: number = 3;
 
-  inputType: string = "checkbox";
+  inputType: string = 'checkbox';
 
-  myClassName: string = "myColor";
+  myClassName: string = 'myColor';
 
-  constructor() {
+  constructor() {}
 
+  showWelcomeMessage() {
+    alert('Welcome to Angular 20');
+  }
+
+  changeCourseName() {
+    this.courseName = "Reactjs Tutorial"
+  }
+
+  onCityChange() {
+    alert("City Changed")
   }
 }
