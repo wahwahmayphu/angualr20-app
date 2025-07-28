@@ -1,0 +1,22 @@
+<table>
+   <tr>
+      <td>
+
+         @if( isParaVisible === true) {
+            <p>This is a sample paragraph.</p>
+         } @else {
+            <h3>isParaVisible has false value</h3>
+         }
+      </td>
+
+      <td>
+         <button (click)="showP()">Show P</button>
+      </td>
+      <td>
+         <button (click)="hideP()">Hide P</button>
+
+      </td>
+
+      
+   </tr>
+</table>
